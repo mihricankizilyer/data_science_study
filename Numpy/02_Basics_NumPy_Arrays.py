@@ -120,7 +120,6 @@ x = [1,3,4,5,8,11,22,45]
 x1, x2, x3 =np.split(x, [3,5])
 
 arr = np.arange(16).reshape((4,4))
-arr
 upper, lower = np.vsplit(arr,[2])
 print(upper)
 print(lower)
