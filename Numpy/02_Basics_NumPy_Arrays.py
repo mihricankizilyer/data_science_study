@@ -2,7 +2,7 @@
 # Numpy Array Attributes
 ########################################
 
-import Basics_NumPy_Arrays as np
+import numpy as np
 np.random.seed(0) # seed for reproducibility
 
 x1 = np.random.randint(10, size=6) #one-dimensional array
