@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 
 # **VERİ ÖN İŞLEME**
@@ -53,7 +53,9 @@ Peki veri setinin eğilimin dışına çıkmayı nasıl tanımlarız?
 
 - **2. Standart Sapma Yaklaşımı**
 
-> Bir değişkenin ortalamasının üzerine aynı değişkenin standart sapması hesaplanarak eklenir. 1, 2 ya da 3 standart sapma değeri ortalama üzerine eklenerek ortaya çıkan bu değer eşik değer olarak düşünülür ve bu değerden yukarı ya da aşağıda olan değerler aykırı değer olaak tanımlanır.
+> Bir değişkenin ortalamasının üzerine aynı değişkenin standart sapması hesaplanarak eklenir.
+1, 2 ya da 3 standart sapma değeri ortalama üzerine eklenerek ortaya çıkan bu değer eşik değer
+olarak düşünülür ve bu değerden yukarı ya da aşağıda olan değerler aykırı değer olaak tanımlanır.
 
 EŞİK DEĞER = ORTALAMA + 1*STANDART SAPMA
 
@@ -63,11 +65,14 @@ EŞİK DEĞER = ORTALAMA + 3*STANDART SAPMA
 
 - **3. Z-Skoru Yaklaşımı**
 
->Standart sapma yöntemine benzer şekilde çalışır. Değişken standart normal dağılıma uyarlar, yani standartlaştırılır. Sonrasında dağılımın sağından ve solundan -+2.5 değerine göre bir eşik değer konulur ve bu değerin üzerinde ya da altında olan değerler aykırı değer olarak işaretlenir.
+>Standart sapma yöntemine benzer şekilde çalışır. Değişken standart normal dağılıma uyarlar, yani standartlaştırılır.
+Sonrasında dağılımın sağından ve solundan -+2.5 değerine göre bir eşik değer konulur ve bu değerin üzerinde ya da altında
+olan değerler aykırı değer olarak işaretlenir.
 
 - **4. Boxplot(IQR) Yöntemi**
 
-> En sık kullanılan yöntemlerden birisidir. Değişkenin değerleri küçükten büyüğe sıralanır. Çeyrekliklerine yani Q1Q3 değerlerine karşılık değerler üzerinden bir eşik değer hesaplanır ve bu eşik değere göre aykırı değer tanımı yapılır.
+> En sık kullanılan yöntemlerden birisidir. Değişkenin değerleri küçükten büyüğe sıralanır. Çeyrekliklerine yani Q1Q3 değerlerine karşılık değerler
+üzerinden bir eşik değer hesaplanır ve bu eşik değere göre aykırı değer tanımı yapılır.
 
 IQR = 1.5 * (Q3-Q1)
 
@@ -94,6 +99,7 @@ df_table = df["table"]
 df_table.head()
 
 sns.boxplot(x = df_table);
+
 #kutu grafiği
 #gözlemlenen değerler aykırıdır
 
@@ -191,7 +197,8 @@ df_table[aykiri_tf]
 
 Gözlemleri bulundukları konumda yoğunluk tabanlı skorlayarak buna göre aykırı değer olabilecek tanımlayabilmemize imkan sağlar.
 
-Bir noktanın local yoğunluğu bu noktanın komşuları ile karşılaştırılıyor. Eğer bir nokta komşularının yoğunluğundan anlamlı bir şekilde düşükse bu nokta komşularından daha seyrek bir noktada bulunuyordur.
+Bir noktanın local yoğunluğu bu noktanın komşuları ile karşılaştırılıyor. 
+Eğer bir nokta komşularının yoğunluğundan anlamlı bir şekilde düşükse bu nokta komşularından daha seyrek bir noktada bulunuyordur.
 """
 
 import seaborn as sns
